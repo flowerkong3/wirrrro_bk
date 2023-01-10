@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+:root {
+	/* Color System */
+	--color-white:#FFFDF9;
+	--color-black:#090909;
+	--color-magenta:#A43380;
+	--color-green:#21841B;
+	--color-blue:#327377;
+	--color-yellow:#AB7F22;
+	--color-purple:rebeccapurple;
+	--color-grey95 : #959595;
+
+}
+
+/* ++++++++++ Font System++++++++++ */
+/* Montserrat */
+@font-face {
+	font-family: 'Montserrat-Regular';
+	src: url(../font/Montserrat-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Montserrat-Medium';
+	src: url(../font/Montserrat-Medium.ttf);
+}
+
+@font-face {
+	font-family: 'Montserrat-Bold';
+	src: url(../font/Montserrat-Bold.ttf);
+}
+
+@font-face {
+	font-family: 'Montserrat-Black';
+	src: url(../font/Montserrat-Black.ttf);
+}
+
+/* NotoSansKR */
+@font-face {
+	font-family: 'NotoSansKR-Light';
+	src: url(../font/Noto_Sans_KR/NotoSansKR-Light.otf);
+}
+
+@font-face {
+	font-family: 'NotoSansKR-Medium';
+	src: url(../font/Noto_Sans_KR/NotoSansKR-Medium.otf);
+}
+
+@font-face {
+	font-family: 'NotoSansKR-Bold';
+	src: url(../font/Noto_Sans_KR/NotoSansKR-Bold.otf);
+}
+/* //++++++++++ Font ++++++++++ */
+
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+html {font-size:10px;}
+ul,li,ol {list-style: none;}
+body {
+	max-width: 2560px;
+	width: 100%;
+	overflow-x: hidden;
+	font-family: 'Montserrat-Medium';
+	/* background: linear-gradient(70deg, #000, #111, #000); */
+	background: var(--color-black);
+}
+a {
+	color: var(--color-white);
+	text-decoration: none;
+}
+button {background: transparent; border: none; cursor:pointer}
+.blind {position:absolute; left: -9999%; top: -9999%;}
+
