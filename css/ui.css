@@ -407,18 +407,6 @@ body {
 	color: #fff;
 } */
 
-/*  +++++++++++  패럴렉스  +++++++++++  */
-/* .parallax {height:20000px; width:100%; position:relative; z-index:1000;} */
-.parallax {overflow:hidden;}
-.parallax-light {    
-	z-index:3000;
-	position: absolute;
-	filter: blur(40px);
-	max-width: 13000px; width:100%;height:auto;
-	top:-500px; left:-100px;
-	/* transform: translateX(-50%);
-	left:50%; */
-}
 
 .lottie-type02 {margin-left:-150px; position:relative;z-index:300;}
 
@@ -447,7 +435,7 @@ body {
   background-blend-mode: multiply;
 }
 
-/* 빛보다 위게 오게 */
+/* 배경 이미지보다 위로 오게 */
 .title-wrap {position:relative; z-index:300;}
 .accordion {position:relative; z-index:300;}
 .list {position:relative; z-index:300;}
