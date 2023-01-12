@@ -133,7 +133,7 @@ function likeStart(){
 
 
 
-// * Text Fade Ani
+// * Scroll Text Fade Ani
 const sec01 = document.querySelector(".sec01");
 const sec01Top = document.querySelector(".sec01").offsetTop;
 const sec02 = document.querySelector(".sec02");

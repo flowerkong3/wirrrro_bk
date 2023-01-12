@@ -17,7 +17,7 @@ body {
 
 /* +++++++++++ [Header]  : Scroll Moving Header +++++++++++ */
 .header {
-	z-index: 100;
+	z-index: 1000;
 	position: fixed;
 	width: 100%;
 	height: 100px;
@@ -32,8 +32,7 @@ body {
 .header.active {transform: translateY(-100px);}
 .header-main {
 	display: flex;
-	/* justify-content: space-between; */
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	padding: 0 40px;
 }
@@ -313,11 +312,12 @@ body {
 	width: 100%;
 	height: 100vh;
 	background: var(--color-black);
+	opacity:.95;
 }
-.header.on::before {display: block; margin-top: 100px;}
+.header.on::before {display: block; margin-top: 0px;}
 .header.on nav {display: block;}
 .toggle-menu {
-	display: none;
+	display: block;
 	position: absolute;
 	top: 40px;
 	right: 40px;
@@ -336,10 +336,11 @@ body {
 .toggle-menu span:nth-child(1) {top: 0;}
 .toggle-menu span:nth-child(2) {top: 10px;}
 .toggle-menu span:nth-child(3) {top: 20px;}
-.toggle-menu.on span:nth-child(1) {transform: rotate(45deg);}
-.toggle-menu.on span:nth-child(2) {transform: rotate(-45deg);	top: 0;}
-.toggle-menu.on span:nth-child(3) {display: none;}
-.nav.on {margin-top: 100px;}
+.toggle-menu.on span:nth-child(1) {transform: rotate(45deg); top: 16px;}
+.toggle-menu.on span:nth-child(2) {display:none;}
+.toggle-menu.on span:nth-child(3) {transform: rotate(-45deg);	top: 16px;}
+/* .nav.on {margin-top: 100px;} */
+.nav {display:none;}
 
 /* Button : Resume */
 .resume {
@@ -450,6 +451,40 @@ body {
 .lottie-like {position:relative; z-index:300;}
 
 
+
+
+	/*  +++++++++++  Mobile Menu  +++++++++++  */
+.header-main {padding: 0;}
+.header-main .nav ul {gap: 0}
+.header-main .nav ul li {position:relative; line-height:1.2; margin-top:50px; transition: all 0.3s;}
+.header-main .nav ul li::before {content:""; position:absolute; width:0; height:1px; bottom: -5px; left:0; background: #fff; transition: all 0.3s;}
+.header-main .nav ul li:hover::before {width:100%;}
+.header-main .nav ul li a {font-size:3rem;}
+.header-main .nav ul li:first-child::before, 
+.header-main .nav ul li:last-child::before {
+	display:none;
+}
+.header-main .nav ul li:nth-child(1) a {color: #777;}
+.header-main .toggle-menu {display: block;}
+.header-main .nav {display: none;}
+.header-main .nav ul {
+	display: flex;
+	gap: 3rem;
+	position: absolute;
+	flex-direction: column;
+	text-align: left;
+	left: 37%;
+	margin-top: 100px;
+}
+
+
+
+
+
+
+
+
+
 /* 반응형 */
 @media screen and (max-width:768px) {
 	html {font-size: 7px;}
@@ -492,9 +527,11 @@ body {
 	.txt-type01 {font-size: 2rem;}
 
 	/*  +++++++++++  Mobile Menu  +++++++++++  */
-	.header-main {padding: 0;}
+	.header-main .nav ul {left:40px;}
+	/* .header-main {padding: 0;}
 	.header-main .nav ul {gap: 0}
-	.header-main .nav ul li a {font-size: 30px;}
+	.header-main .nav ul li {line-height:1.2;}
+	.header-main .nav ul li a {font-size:3rem;}
 	.toggle-menu {display: block;}
 	.nav {display: none;}
 	.nav ul {
@@ -504,7 +541,7 @@ body {
 		flex-direction: column;
 		text-align: left;
 		left: 40px;
-	}
+	} */
 
 	#lottie-type02 {
 		max-width: 200px;
